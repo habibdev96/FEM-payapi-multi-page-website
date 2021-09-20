@@ -6,12 +6,13 @@ const StyledLink = styled(Link)`
   ${textStyles}
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--lightSanJuanBlue);
   transition: var(--mainTransition);
+  color: ${({ light }) => (light ? 'var(--white)' : 'var(--lightSanJuanBlue)')};
 
   &:hover,
   &:focus {
-    color: var(--sanJuanBlue);
+    color: ${({ light }) =>
+      light ? 'var(--faintBlue)' : 'var(--sanJuanBlue)'};
   }
 `;
 

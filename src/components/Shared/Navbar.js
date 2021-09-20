@@ -3,14 +3,14 @@ import logo from '../../assets/shared/desktop/logo.svg';
 import StyledLink from '../styledElements/Link';
 import { Link } from 'react-router-dom';
 import { Button } from '../styledElements/Buttons';
-import { maxWidthLg } from '../../abstracts/Mixins';
+import { maxWidthLg, sectionSpacingSm } from '../../abstracts/Mixins';
 
 const Container = styled.div`
   ${maxWidthLg}
+  ${sectionSpacingSm}
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5rem 2rem;
 
   .info {
     display: flex;
@@ -49,7 +49,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Button to='Pricing' primary>
+        <Button to='Pricing' primary={+true}>
           Schedule a Demo
         </Button>
       </Container>

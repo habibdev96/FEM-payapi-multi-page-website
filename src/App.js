@@ -6,6 +6,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Navbar from './components/Shared/Navbar';
 import CtaSection from './components/Shared/CtaSection';
+import Footer from './components/Shared/Footer';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route exact path='/Contact' component={Contact} />
         </Switch>
         <CtaSection />
+        <Footer />
       </Router>
     </>
   );

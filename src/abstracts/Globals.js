@@ -4,6 +4,7 @@ const Globals = createGlobalStyle`
   :root {
     /* colors */
     --white: hsl(220, 60%, 99%); 
+    --faintBlue: hsl(220, 60%, 79%); 
     --darkPink: hsl(337, 48%, 49%);
     --activePink: hsl(337, 60%, 64%);
     --sanJuanBlue: hsl(207, 33%, 32%);

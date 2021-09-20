@@ -59,7 +59,7 @@ const Partners = () => {
             developers with the tools they need to create easy and accessible
             experiences for their users.
           </Paragraph>
-          <Button to='/About' secondary>
+          <Button to='/About' secondary={+true}>
             About us
           </Button>
         </div>
