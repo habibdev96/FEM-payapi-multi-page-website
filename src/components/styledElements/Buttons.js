@@ -27,6 +27,21 @@ export const Button = styled(Link)`
         box-shadow: var(--activeShadow);
       }
     `}
+
+  ${({ secondary }) =>
+    secondary &&
+    css`
+      background-color: transparent;
+      border: 0.1rem solid var(--white);
+      color: var(--white);
+      padding: 1rem 2rem;
+
+      &:hover,
+      &:focus {
+        background-color: var(--white);
+        color: var(--mirageBlue);
+      }
+    `}
 `;
 
 export const CtaButton = styled.input`

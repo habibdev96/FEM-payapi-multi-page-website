@@ -10,14 +10,14 @@ const headingStyles = css`
   font-family: 'DM Serif Display', serif;
   font-weight: 400;
   letter-spacing: 0.1rem;
-  line-height: 1.3;
+  line-height: 1.2;
 `;
 
 const textStyles = css`
   font-family: 'Public Sans', sans-serif;
   font-weight: 400;
   letter-spacing: 0.1rem;
-  line-height: 1.6;
+  line-height: 2.2;
 `;
 
 const sectionSpacingSm = css`
