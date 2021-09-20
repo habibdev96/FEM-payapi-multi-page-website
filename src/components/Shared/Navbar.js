@@ -38,9 +38,15 @@ const Navbar = () => {
             <img src={logo} alt='payapi logo' className='logo' />
           </Link>
           <ul className='links'>
-            <StyledLink to='/Pricing'>Pricing</StyledLink>
-            <StyledLink to='/About'>About</StyledLink>
-            <StyledLink to='/Contact'>Contact</StyledLink>
+            <li>
+              <StyledLink to='/Pricing'>Pricing</StyledLink>
+            </li>
+            <li>
+              <StyledLink to='/About'>About</StyledLink>
+            </li>
+            <li>
+              <StyledLink to='/Contact'>Contact</StyledLink>
+            </li>
           </ul>
         </div>
         <Button to='Pricing' primary>
