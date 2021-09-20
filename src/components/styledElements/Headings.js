@@ -12,3 +12,9 @@ export const SectionHeading = styled.h2`
   font-size: 4.8rem;
   color: ${({ light }) => (light ? 'var(--white)' : 'var(--sanJuanBlue)')};
 `;
+
+export const SubHeading = styled.h3`
+  ${headingStyles}
+  font-size: 2.8rem;
+  color: ${({ light }) => (light ? 'var(--white)' : 'var(--sanJuanBlue)')};
+`;

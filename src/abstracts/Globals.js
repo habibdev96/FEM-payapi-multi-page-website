@@ -9,6 +9,7 @@ const Globals = createGlobalStyle`
     --sanJuanBlue: hsl(207, 33%, 32%);
     --lightSanJuanBlue: hsl(207, 16%, 50%);
     --mirageBlue: hsl(207, 27%, 15%);
+    --bg: hsl(207, 44%, 95%)
     
     /* radius */
     --mainRadius: 1rem;
@@ -49,7 +50,7 @@ const Globals = createGlobalStyle`
   body {
     overflow-x: hidden;
     position: relative;
-    background-color: var(--white);
+    background-color: var(--bg);
   }
 
   img {

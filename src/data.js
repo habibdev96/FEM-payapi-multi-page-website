@@ -11,6 +11,10 @@ import googleLightLogo from './assets/shared/desktop/googlelight.svg';
 import nvidiaDarkLogo from './assets/shared/desktop/nvidia.svg';
 import nvidiaLightLogo from './assets/shared/desktop/nvidialight.svg';
 
+import featureCardIconOne from './assets/home/desktop/icon-personal-finances.svg';
+import featureCardIconTwo from './assets/home/desktop/icon-banking-and-coverage.svg';
+import featureCardIconThree from './assets/home/desktop/icon-consumer-payments.svg';
+
 export const companiesData = [
   {
     id: 1,
@@ -41,5 +45,29 @@ export const companiesData = [
     id: 6,
     company: 'Nvidia',
     logo: { light: nvidiaLightLogo, dark: nvidiaDarkLogo },
+  },
+];
+
+export const featuresCardsData = [
+  {
+    id: 1,
+    icon: featureCardIconOne,
+    title: 'Personal Finances',
+    description:
+      'Consolidate financial data from multiple sources and categorize transactions up to 2 years of history. Analyze reports to reconcile activities in your account.',
+  },
+  {
+    id: 2,
+    icon: featureCardIconTwo,
+    title: 'Banking & Coverage',
+    description:
+      'With our platform, you can speed up account onboarding and support ongoing payments for checking, savings, credit card, and brokerage accounts.',
+  },
+  {
+    id: 3,
+    icon: featureCardIconThree,
+    title: 'Finances',
+    description:
+      'It’s easier to set up secure bank payments with us through a flow designed with the user experience in mind. Customers could instantly authenticate their account.',
   },
 ];
