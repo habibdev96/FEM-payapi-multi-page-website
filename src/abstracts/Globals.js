@@ -48,6 +48,7 @@ const Globals = createGlobalStyle`
 
   body {
     overflow-x: hidden;
+    position: relative;
     background-color: var(--white);
   }
 

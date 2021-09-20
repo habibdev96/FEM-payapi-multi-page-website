@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import logo from '../../assets/shared/desktop/logo.svg';
 import StyledLink from '../styledElements/Link';
 import { Link } from 'react-router-dom';
-import Button from '../styledElements/Buttons';
+import { Button } from '../styledElements/Buttons';
 import { maxWidthLg } from '../../abstracts/Mixins';
 
 const Wrapper = styled.div`
