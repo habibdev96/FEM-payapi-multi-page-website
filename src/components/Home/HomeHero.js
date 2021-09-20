@@ -16,7 +16,7 @@ const Header = styled.header`
   }
 `;
 
-const Wrapper = styled.div`
+const Container = styled.div`
   ${maxWidthLg}
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -33,6 +33,8 @@ const Wrapper = styled.div`
   }
 
   .img {
+    width: 75%;
+    margin: 0 auto;
     position: relative;
     z-index: 10;
   }
@@ -42,7 +44,7 @@ const HomeHero = () => {
   return (
     <Header>
       <img src={bgPattern} alt='' className='bg-pattern' />
-      <Wrapper>
+      <Container>
         <div className='info'>
           <HeroHeading>
             Start building with our APIs for absolutely free.
@@ -58,7 +60,7 @@ const HomeHero = () => {
           alt='payapi notification on mobile device'
           className='img'
         />
-      </Wrapper>
+      </Container>
     </Header>
   );
 };

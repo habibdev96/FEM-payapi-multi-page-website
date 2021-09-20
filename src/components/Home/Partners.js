@@ -20,7 +20,7 @@ const Section = styled.section`
   }
 `;
 
-const Wrapper = styled.div`
+const Container = styled.div`
   ${maxWidthLg}
   ${sectionSpacingMd}
   display: grid;
@@ -50,7 +50,7 @@ const Partners = () => {
   return (
     <Section>
       <img src={bgPattern} alt='' className='bg-pattern' />
-      <Wrapper>
+      <Container>
         <div className='info'>
           <SectionHeading light>Who we work with</SectionHeading>
           <Paragraph light>
@@ -73,7 +73,7 @@ const Partners = () => {
             />
           ))}
         </div>
-      </Wrapper>
+      </Container>
     </Section>
   );
 };

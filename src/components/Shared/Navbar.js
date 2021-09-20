@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '../styledElements/Buttons';
 import { maxWidthLg } from '../../abstracts/Mixins';
 
-const Wrapper = styled.div`
+const Container = styled.div`
   ${maxWidthLg}
   display: flex;
   align-items: center;
@@ -32,7 +32,7 @@ const Wrapper = styled.div`
 const Navbar = () => {
   return (
     <nav>
-      <Wrapper>
+      <Container>
         <div className='info'>
           <Link to='/'>
             <img src={logo} alt='payapi logo' className='logo' />
@@ -46,7 +46,7 @@ const Navbar = () => {
         <Button to='Pricing' primary>
           Schedule a Demo
         </Button>
-      </Wrapper>
+      </Container>
     </nav>
   );
 };

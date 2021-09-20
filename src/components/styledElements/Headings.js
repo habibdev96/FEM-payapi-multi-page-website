@@ -10,5 +10,5 @@ export const HeroHeading = styled.h1`
 export const SectionHeading = styled.h2`
   ${headingStyles}
   font-size: 4.8rem;
-  color: ${({ light }) => (light ? 'var(--white)' : 'var(--mirageBlue)')};
+  color: ${({ light }) => (light ? 'var(--white)' : 'var(--sanJuanBlue)')};
 `;
