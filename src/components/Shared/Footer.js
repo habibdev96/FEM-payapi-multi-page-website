@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { maxWidthLg, sectionSpacingSm } from '../../abstracts/Mixins';
 import bgPattern from '../../assets/shared/desktop/bg-pattern-circle.svg';
 import { FaFacebookSquare, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import Tag from './Tag';
 
 const StyledFooter = styled.footer`
   position: relative;
@@ -99,6 +100,7 @@ const Footer = () => {
           </a>
         </div>
       </Container>
+      <Tag />
     </StyledFooter>
   );
 };
