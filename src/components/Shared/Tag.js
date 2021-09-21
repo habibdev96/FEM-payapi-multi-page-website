@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { flexCenter, textStyles, headingStyles } from '../../abstracts/Mixins';
 import logo from '../../assets/logo/habibdevgif.gif';
 
-const Wrapper = styled.footer`
+const Container = styled.div`
   ${flexCenter};
   flex-wrap: wrap;
   padding: 2rem;
@@ -31,7 +31,7 @@ const Wrapper = styled.footer`
 
 const Tag = () => {
   return (
-    <Wrapper>
+    <Container>
       <h3 className='heading'>
         project for{' '}
         <a
@@ -53,7 +53,7 @@ const Tag = () => {
         </a>
       </h3>
       <img src={logo} alt='logo' className='logo' />
-    </Wrapper>
+    </Container>
   );
 };
 

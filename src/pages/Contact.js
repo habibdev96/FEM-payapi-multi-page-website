@@ -1,5 +1,11 @@
+import SubHero from '../components/Shared/SubHero';
+
 const Contact = () => {
-  return <div>contact page</div>;
+  return (
+    <>
+      <SubHero title='Contact' />
+    </>
+  );
 };
 
 export default Contact;

@@ -1,5 +1,11 @@
+import SubHero from '../components/Shared/SubHero';
+
 const Pricing = () => {
-  return <div>pricing page</div>;
+  return (
+    <>
+      <SubHero title='Pricing' />
+    </>
+  );
 };
 
 export default Pricing;

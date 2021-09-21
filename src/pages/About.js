@@ -1,5 +1,11 @@
+import SubHero from '../components/Shared/SubHero';
+
 const About = () => {
-  return <div>about page</div>;
+  return (
+    <>
+      <SubHero title='About' />
+    </>
+  );
 };
 
 export default About;
