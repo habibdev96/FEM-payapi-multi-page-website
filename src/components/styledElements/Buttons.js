@@ -42,6 +42,21 @@ export const Button = styled(Link)`
         color: var(--mirageBlue);
       }
     `}
+
+  ${({ tertiary }) =>
+    tertiary &&
+    css`
+      background-color: transparent;
+      border: 0.1rem solid var(--sanJuanBlue);
+      color: var(--sanJuanBlue);
+      padding: 1rem 2rem;
+
+      &:hover,
+      &:focus {
+        background-color: var(--sanJuanBlue);
+        color: var(--white);
+      }
+    `}
 `;
 
 export const CtaButton = styled.input`

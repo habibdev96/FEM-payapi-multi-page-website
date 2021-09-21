@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { maxWidthLg, sectionSpacingSm } from '../../abstracts/Mixins';
+import { maxWidthLg, sectionSpacingMd } from '../../abstracts/Mixins';
 import { featuresCardsData } from '../../data';
 import HomeFeatureCard from './HomeFeatureCard';
 
 const Container = styled.div`
   ${maxWidthLg}
-  ${sectionSpacingSm}
+  ${sectionSpacingMd}
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;

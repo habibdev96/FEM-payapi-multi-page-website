@@ -71,3 +71,140 @@ export const featuresCardsData = [
       'It’s easier to set up secure bank payments with us through a flow designed with the user experience in mind. Customers could instantly authenticate their account.',
   },
 ];
+
+export const pricingData = [
+  {
+    id: 1,
+    title: 'Free Plan',
+    description:
+      'Build and test using our core set of products with up to 100 API requests',
+    cost: '$0.00',
+    features: [
+      {
+        id: 1,
+        feature: 'Transactions',
+        isAvailable: true,
+      },
+      {
+        id: 2,
+        feature: 'Auth',
+        isAvailable: true,
+      },
+      {
+        id: 3,
+        feature: 'Identity',
+        isAvailable: true,
+      },
+      {
+        id: 4,
+        feature: 'Invenstments',
+        isAvailable: false,
+      },
+      {
+        id: 5,
+        feature: 'Assets',
+        isAvailable: false,
+      },
+      {
+        id: 6,
+        feature: 'Liabilities',
+        isAvailable: false,
+      },
+      {
+        id: 7,
+        feature: 'Income',
+        isAvailable: false,
+      },
+    ],
+  },
+
+  {
+    id: 2,
+    title: 'Basic Plan',
+    description:
+      'Launch your project with unlimited requests and no contractual minimums',
+    cost: '$249.00',
+    features: [
+      {
+        id: 1,
+        feature: 'Transactions',
+        isAvailable: true,
+      },
+      {
+        id: 2,
+        feature: 'Auth',
+        isAvailable: true,
+      },
+      {
+        id: 3,
+        feature: 'Identity',
+        isAvailable: true,
+      },
+      {
+        id: 4,
+        feature: 'Invenstments',
+        isAvailable: true,
+      },
+      {
+        id: 5,
+        feature: 'Assets',
+        isAvailable: true,
+      },
+      {
+        id: 6,
+        feature: 'Liabilities',
+        isAvailable: false,
+      },
+      {
+        id: 7,
+        feature: 'Income',
+        isAvailable: false,
+      },
+    ],
+  },
+
+  {
+    id: 3,
+    title: 'Premium Plan',
+    description:
+      'Get tailored solutions, volume pricing, and dedicated support for your team',
+    cost: '$499.00',
+    features: [
+      {
+        id: 1,
+        feature: 'Transactions',
+        isAvailable: true,
+      },
+      {
+        id: 2,
+        feature: 'Auth',
+        isAvailable: true,
+      },
+      {
+        id: 3,
+        feature: 'Identity',
+        isAvailable: true,
+      },
+      {
+        id: 4,
+        feature: 'Invenstments',
+        isAvailable: true,
+      },
+      {
+        id: 5,
+        feature: 'Assets',
+        isAvailable: true,
+      },
+      {
+        id: 6,
+        feature: 'Liabilities',
+        isAvailable: true,
+      },
+      {
+        id: 7,
+        feature: 'Income',
+        isAvailable: true,
+      },
+    ],
+  },
+];

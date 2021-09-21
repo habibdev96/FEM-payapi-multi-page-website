@@ -11,7 +11,7 @@ const SubHero = ({ title }) => {
   return (
     <header>
       <Container>
-        <SectionHeading subhero>{title}</SectionHeading>
+        <SectionHeading lg>{title}</SectionHeading>
       </Container>
     </header>
   );
