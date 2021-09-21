@@ -6,13 +6,15 @@ import phonesImage from '../../assets/home/desktop/illustration-simple-ui.svg';
 import bgPattern from '../../assets/shared/desktop/bg-pattern-circle.svg';
 
 const Section = styled.section`
+  background-color: var(--mirageBlue);
+  overflow: hidden;
   position: relative;
 
   .bg-pattern {
-    width: 50%;
     position: absolute;
-    top: -10%;
+    top: -20%;
     right: -20%;
+    width: 50%;
   }
 `;
 
@@ -23,6 +25,11 @@ const Container = styled.div`
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: var(--gap);
+
+  .img {
+    position: relative;
+    z-index: 10;
+  }
 `;
 
 const HomeFeatureSectionTwo = () => {
@@ -30,8 +37,8 @@ const HomeFeatureSectionTwo = () => {
     <Section>
       <Container>
         <div className='info'>
-          <SectionHeading>Simple UI & UX</SectionHeading>
-          <Paragraph>
+          <SectionHeading light>Simple UI & UX</SectionHeading>
+          <Paragraph light>
             Our pre-built form is easy to integrate in your app or website’s
             checkout flow and designed to optimize conversion.
           </Paragraph>

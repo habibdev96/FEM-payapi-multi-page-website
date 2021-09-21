@@ -5,6 +5,7 @@ import Pricing from './pages/Pricing';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Navbar from './components/Shared/Navbar';
+import MainBgPattern from './components/styledElements/Pattern';
 import CtaSection from './components/Shared/CtaSection';
 import Footer from './components/Shared/Footer';
 
@@ -13,6 +14,7 @@ const App = () => {
     <>
       <Globals />
       <Router>
+        <MainBgPattern />
         <Navbar />
         <Switch>
           <Route exact path='/' component={Home} />

@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { HeroHeading } from '../styledElements/Headings';
 import Cta from '../Shared/Cta';
 import heroImg from '../../assets/home/desktop/illustration-phone-mockup.svg';
-import bgPattern from '../../assets/shared/desktop/bg-pattern-circle.svg';
 import { maxWidthLg, textStyles } from '../../abstracts/Mixins';
 import StyledLink from '../styledElements/Link';
 
@@ -43,7 +42,6 @@ const Container = styled.div`
 const HomeHero = () => {
   return (
     <Header>
-      <img src={bgPattern} alt='' className='bg-pattern' />
       <Container>
         <div className='info'>
           <HeroHeading>
