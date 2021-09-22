@@ -6,7 +6,7 @@ import { TwoCol } from '../styledElements/Containers';
 const HomeFeatureSectionOne = () => {
   return (
     <section>
-      <TwoCol center>
+      <TwoCol center md>
         <img src={aboutImage} alt='api code example' className='img' />
         <div className='info'>
           <SectionHeading>Easy to implement</SectionHeading>

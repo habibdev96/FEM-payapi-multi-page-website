@@ -19,7 +19,7 @@ const ContactSection = () => {
 
   return (
     <StyledSection>
-      <TwoCol sm>
+      <TwoCol md>
         <ContactForm />
         <div className='info'>
           <SubHeading>

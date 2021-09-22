@@ -80,3 +80,23 @@ export const CtaButton = styled.input`
     background-color: var(--activePink);
   }
 `;
+
+export const FormButton = styled.input`
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 1rem 2rem;
+  width: 50%;
+  border: 0.1rem solid var(--sanJuanBlue);
+  border-radius: var(--btnRadius);
+  transition: var(--mainTransition);
+  color: var(--sanJuanBlue);
+
+  &:hover,
+  &:focus {
+    background-color: var(--sanJuanBlue);
+    color: var(--white);
+  }
+`;
