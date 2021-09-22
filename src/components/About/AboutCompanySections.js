@@ -1,8 +1,7 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 import AboutCompany from './AboutCompany';
-import { aboutData } from '../../data';
 import { maxWidthSm, sectionSpacingSm } from '../../abstracts/Mixins';
+import { useGlobalContext } from '../../context';
 
 const Container = styled.div`
   ${sectionSpacingSm}
@@ -10,7 +9,7 @@ const Container = styled.div`
 `;
 
 export const AboutCompanyOne = () => {
-  const [aboutTop, setAboutTop] = useState(aboutData[0]);
+  const { aboutTop } = useGlobalContext();
 
   return (
     <section>
@@ -24,7 +23,7 @@ export const AboutCompanyOne = () => {
 };
 
 export const AboutCompanyTwo = () => {
-  const [aboutBottom, setAboutBottom] = useState(aboutData[1]);
+  const { aboutBottom } = useGlobalContext();
 
   return (
     <section>

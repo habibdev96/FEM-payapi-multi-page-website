@@ -1,11 +1,10 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 import { maxWidthLg, sectionSpacingMd } from '../../abstracts/Mixins';
 import { SectionHeading } from '../styledElements/Headings';
 import Paragraph from '../styledElements/Paragraphs';
-import { companiesData } from '../../data';
 import bgPattern from '../../assets/shared/desktop/bg-pattern-circle.svg';
 import { Button } from '../styledElements/Buttons';
+import { useGlobalContext } from '../../context';
 
 const Section = styled.section`
   position: relative;
@@ -45,7 +44,7 @@ const Container = styled.div`
 `;
 
 const Partners = () => {
-  const [companies, setCompanies] = useState(companiesData);
+  const { companies } = useGlobalContext();
 
   return (
     <Section>

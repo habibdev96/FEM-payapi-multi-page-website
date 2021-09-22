@@ -1,9 +1,8 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 import { StatHeading } from '../styledElements/Headings';
 import Paragraph from '../styledElements/Paragraphs';
-import { statsData } from '../../data';
 import { maxWidthSm, sectionSpacingSm } from '../../abstracts/Mixins';
+import { useGlobalContext } from '../../context';
 
 const Container = styled.div`
   ${maxWidthSm}
@@ -16,7 +15,7 @@ const Container = styled.div`
 `;
 
 const AboutStats = () => {
-  const [stats, setStats] = useState(statsData);
+  const { stats } = useGlobalContext();
 
   return (
     <section>

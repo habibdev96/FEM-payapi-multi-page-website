@@ -1,8 +1,7 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 import { maxWidthLg, sectionSpacingSm } from '../../abstracts/Mixins';
 import PricingPlan from './PricingPlan';
-import { pricingData } from '../../data';
+import { useGlobalContext } from '../../context';
 
 const Container = styled.div`
   ${maxWidthLg}
@@ -14,7 +13,7 @@ const Container = styled.div`
 `;
 
 const PricingPlans = () => {
-  const [pricings, setPricings] = useState(pricingData);
+  const { pricings } = useGlobalContext();
 
   return (
     <section>

@@ -1,8 +1,7 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 import { maxWidthLg, sectionSpacingMd } from '../../abstracts/Mixins';
-import { featuresCardsData } from '../../data';
 import HomeFeatureCard from './HomeFeatureCard';
+import { useGlobalContext } from '../../context';
 
 const Container = styled.div`
   ${maxWidthLg}
@@ -14,7 +13,7 @@ const Container = styled.div`
 `;
 
 const HomeFeatureCards = () => {
-  const [features, setFeatures] = useState(featuresCardsData);
+  const { features } = useGlobalContext();
 
   return (
     <section>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import ContactForm from './ContactForm';
 import { maxWidthLg, sectionSpacingSm } from '../../abstracts/Mixins';
 import { SubHeading } from '../styledElements/Headings';
-import { companiesData } from '../../data';
+import { useGlobalContext } from '../../context';
 
 const Container = styled.div`
   ${maxWidthLg}
@@ -28,6 +28,8 @@ const Container = styled.div`
 `;
 
 const ContactSection = () => {
+  const { companies } = useGlobalContext();
+
   return (
     <section>
       <Container>
@@ -37,7 +39,7 @@ const ContactSection = () => {
             Join the thousands of innovators already building with u
           </SubHeading>
           <div className='companies'>
-            {companiesData.map((company) => (
+            {companies.map((company) => (
               <img
                 key={company.id}
                 src={company.logo.dark}
