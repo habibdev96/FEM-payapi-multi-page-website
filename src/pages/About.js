@@ -3,6 +3,7 @@ import {
   AboutCompanyOne,
   AboutCompanyTwo,
 } from '../components/About/AboutCompanySections';
+import AboutShowcase from '../components/About/AboutShowcase';
 
 const About = () => {
   return (
@@ -10,6 +11,7 @@ const About = () => {
       <SubHero title='We empower innovators by delivering access to the financial system' />
       <main>
         <AboutCompanyOne />
+        <AboutShowcase />
         <AboutCompanyTwo />
       </main>
     </>
