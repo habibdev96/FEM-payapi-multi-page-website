@@ -27,3 +27,7 @@ export const PricingHeading = styled(SubHeading)`
 export const AboutHeading = styled(PricingHeading)`
   color: var(--sanJuanBlue);
 `;
+
+export const StatHeading = styled(PricingHeading)`
+  font-size: 5.6rem;
+`;
