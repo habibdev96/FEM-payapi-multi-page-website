@@ -49,7 +49,7 @@ const PricingPlan = ({ title, description, cost, features }) => {
       </div>
       <ul className='features'>
         {features.map((feat) => (
-          <li className='feature'>
+          <li className='feature' key={feat.id}>
             {feat.isAvailable && (
               <img
                 src={checkmarkIcon}
@@ -58,7 +58,6 @@ const PricingPlan = ({ title, description, cost, features }) => {
               />
             )}
             <span
-              key={feat.id}
               className={`feature-name ${!feat.isAvailable && 'unavailable'}`}
             >
               {feat.feature}

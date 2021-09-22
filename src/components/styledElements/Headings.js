@@ -23,3 +23,7 @@ export const PricingHeading = styled(SubHeading)`
   font-size: 3.2rem;
   color: var(--darkPink);
 `;
+
+export const AboutHeading = styled(PricingHeading)`
+  color: var(--sanJuanBlue);
+`;

@@ -4,6 +4,8 @@ import { textStyles } from '../../abstracts/Mixins';
 
 const StyledLink = styled(Link)`
   ${textStyles}
+  position: relative;
+  z-index: 10;
   font-size: 1.5rem;
   font-weight: bold;
   transition: var(--mainTransition);
