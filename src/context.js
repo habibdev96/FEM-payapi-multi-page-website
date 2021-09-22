@@ -21,7 +21,15 @@ export const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ companies, features, pricings, aboutTop, aboutBottom, stats }}
+      value={{
+        scrollToTop,
+        companies,
+        features,
+        pricings,
+        aboutTop,
+        aboutBottom,
+        stats,
+      }}
     >
       {children}
     </AppContext.Provider>
