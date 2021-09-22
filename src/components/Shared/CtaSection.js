@@ -1,24 +1,14 @@
-import styled from 'styled-components';
-import { maxWidthLg, sectionSpacingMd } from '../../abstracts/Mixins';
-import { SectionHeading } from '../styledElements/Headings';
 import Cta from './Cta';
-
-const Container = styled.div`
-  ${maxWidthLg}
-  ${sectionSpacingMd}
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: var(--gap);
-`;
+import { SectionHeading } from '../styledElements/Headings';
+import { TwoCol } from '../styledElements/Containers';
 
 const CtaSection = () => {
   return (
     <section>
-      <Container>
+      <TwoCol md center>
         <SectionHeading>Ready to start?</SectionHeading>
         <Cta />
-      </Container>
+      </TwoCol>
     </section>
   );
 };

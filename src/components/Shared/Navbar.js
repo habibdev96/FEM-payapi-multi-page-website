@@ -3,15 +3,9 @@ import logo from '../../assets/shared/desktop/logo.svg';
 import StyledLink from '../styledElements/Link';
 import { Link } from 'react-router-dom';
 import { Button } from '../styledElements/Buttons';
-import { maxWidthLg, sectionSpacingSm } from '../../abstracts/Mixins';
+import { Flex } from '../styledElements/Containers';
 
-const Container = styled.div`
-  ${maxWidthLg}
-  ${sectionSpacingSm}
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
+const StyledNav = styled.nav`
   .info {
     display: flex;
     align-items: center;
@@ -31,8 +25,8 @@ const Container = styled.div`
 
 const Navbar = () => {
   return (
-    <nav>
-      <Container>
+    <StyledNav>
+      <Flex sm>
         <div className='info'>
           <Link to='/'>
             <img src={logo} alt='payapi logo' className='logo' />
@@ -52,8 +46,8 @@ const Navbar = () => {
         <Button to='Pricing' primary={+true}>
           Schedule a Demo
         </Button>
-      </Container>
-    </nav>
+      </Flex>
+    </StyledNav>
   );
 };
 

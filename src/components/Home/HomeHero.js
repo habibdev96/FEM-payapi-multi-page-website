@@ -2,10 +2,11 @@ import styled from 'styled-components';
 import { HeroHeading } from '../styledElements/Headings';
 import Cta from '../Shared/Cta';
 import heroImg from '../../assets/home/desktop/illustration-phone-mockup.svg';
-import { maxWidthLg, textStyles } from '../../abstracts/Mixins';
+import { textStyles } from '../../abstracts/Mixins';
 import StyledLink from '../styledElements/Link';
+import { TwoCol } from '../styledElements/Containers';
 
-const Header = styled.header`
+const StyledHero = styled.header`
   .bg-pattern {
     position: absolute;
     z-index: 1;
@@ -13,13 +14,6 @@ const Header = styled.header`
     right: -10%;
     width: 50%;
   }
-`;
-
-const Container = styled.div`
-  ${maxWidthLg}
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--gap);
 
   .info {
     padding: 8rem 0;
@@ -41,8 +35,8 @@ const Container = styled.div`
 
 const HomeHero = () => {
   return (
-    <Header>
-      <Container>
+    <StyledHero>
+      <TwoCol>
         <div className='info'>
           <HeroHeading>
             Start building with our APIs for absolutely free.
@@ -58,8 +52,8 @@ const HomeHero = () => {
           alt='payapi notification on mobile device'
           className='img'
         />
-      </Container>
-    </Header>
+      </TwoCol>
+    </StyledHero>
   );
 };
 

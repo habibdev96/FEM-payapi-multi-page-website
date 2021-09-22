@@ -1,22 +1,12 @@
-import styled from 'styled-components';
-import { maxWidthLg, sectionSpacingSm } from '../../abstracts/Mixins';
 import aboutImage from '../../assets/home/desktop/illustration-easy-to-implement.svg';
 import { SectionHeading } from '../styledElements/Headings';
 import Paragraph from '../styledElements/Paragraphs';
-
-const Container = styled.div`
-  ${maxWidthLg}
-  ${sectionSpacingSm}
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: var(--gap);
-`;
+import { TwoCol } from '../styledElements/Containers';
 
 const HomeFeatureSectionOne = () => {
   return (
     <section>
-      <Container>
+      <TwoCol center>
         <img src={aboutImage} alt='api code example' className='img' />
         <div className='info'>
           <SectionHeading>Easy to implement</SectionHeading>
@@ -26,7 +16,7 @@ const HomeFeatureSectionOne = () => {
             payments functionality with ease.
           </Paragraph>
         </div>
-      </Container>
+      </TwoCol>
     </section>
   );
 };

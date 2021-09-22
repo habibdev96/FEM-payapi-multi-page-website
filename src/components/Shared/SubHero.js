@@ -1,20 +1,12 @@
-import styled from 'styled-components';
-import { maxWidthLg, sectionSpacingSm } from '../../abstracts/Mixins';
 import { SectionHeading } from '../styledElements/Headings';
-
-const Container = styled.div`
-  ${maxWidthLg}
-  ${sectionSpacingSm}
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-`;
+import { TwoCol } from '../styledElements/Containers';
 
 const SubHero = ({ title }) => {
   return (
     <header>
-      <Container>
+      <TwoCol>
         <SectionHeading lg>{title}</SectionHeading>
-      </Container>
+      </TwoCol>
     </header>
   );
 };

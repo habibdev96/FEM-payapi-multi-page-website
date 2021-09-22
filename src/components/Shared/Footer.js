@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import logo from '../../assets/shared/desktop/logolight.svg';
 import StyledLink from '../styledElements/Link';
 import { Link } from 'react-router-dom';
-import { maxWidthLg, sectionSpacingSm } from '../../abstracts/Mixins';
 import bgPattern from '../../assets/shared/desktop/bg-pattern-circle.svg';
 import { FaFacebookSquare, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { Flex } from '../styledElements/Containers';
 import Tag from './Tag';
 
 const StyledFooter = styled.footer`
@@ -18,14 +18,6 @@ const StyledFooter = styled.footer`
     bottom: -90%;
     left: -20%;
   }
-`;
-
-const Container = styled.div`
-  ${maxWidthLg}
-  ${sectionSpacingSm}
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
   .info {
     display: flex;
@@ -65,7 +57,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <img src={bgPattern} alt='' className='bg-pattern' />
-      <Container>
+      <Flex sm>
         <div className='info'>
           <Link to='/'>
             <img src={logo} alt='payapi logo' className='logo' />
@@ -99,7 +91,7 @@ const Footer = () => {
             <FaLinkedin />
           </a>
         </div>
-      </Container>
+      </Flex>
       <Tag />
     </StyledFooter>
   );

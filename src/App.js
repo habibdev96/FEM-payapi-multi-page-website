@@ -9,7 +9,7 @@ import { MainBgPattern } from './components/styledElements/Pattern';
 import CtaSection from './components/Shared/CtaSection';
 import Footer from './components/Shared/Footer';
 
-// TODO: create form | scroll to top | refactor container components | make responsive
+// TODO: create form | refactor container components | make responsive
 
 const App = () => {
   return (

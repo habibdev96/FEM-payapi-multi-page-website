@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { flexCenter, textStyles, headingStyles } from '../../abstracts/Mixins';
 import logo from '../../assets/logo/habibdevgif.gif';
 
-const Container = styled.div`
+const StyledTag = styled.div`
   ${flexCenter};
   flex-wrap: wrap;
   padding: 2rem;
@@ -24,14 +24,14 @@ const Container = styled.div`
     }
   }
 
-  .logo {
+  .tag-logo {
     width: 5rem;
   }
 `;
 
 const Tag = () => {
   return (
-    <Container>
+    <StyledTag>
       <h3 className='heading'>
         project for{' '}
         <a
@@ -52,8 +52,8 @@ const Tag = () => {
           habibdev{' '}
         </a>
       </h3>
-      <img src={logo} alt='logo' className='logo' />
-    </Container>
+      <img src={logo} alt='logo' className='tag-logo' />
+    </StyledTag>
   );
 };
 

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { CtaButton } from '../styledElements/Buttons';
 import { textStyles } from '../../abstracts/Mixins';
 
-const Container = styled.div`
+const StyledCta = styled.div`
   width: 100%;
   position: relative;
   margin: 2rem 0;
@@ -24,10 +24,10 @@ const Container = styled.div`
 
 const Cta = () => {
   return (
-    <Container>
+    <StyledCta>
       <input type='text' placeholder='Enter email address' className='input' />
       <CtaButton type='submit' value='Schedule a Demo' />
-    </Container>
+    </StyledCta>
   );
 };
 

@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { SectionHeading } from '../styledElements/Headings';
-import { maxWidthLg, sectionSpacingSm } from '../../abstracts/Mixins';
 import Paragraph from '../styledElements/Paragraphs';
 import phonesImage from '../../assets/home/desktop/illustration-simple-ui.svg';
 import bgPattern from '../../assets/shared/desktop/bg-pattern-circle.svg';
+import { TwoCol } from '../styledElements/Containers';
 
-const Section = styled.section`
+const StyledSection = styled.section`
   background-color: var(--mirageBlue);
   overflow: hidden;
   position: relative;
@@ -16,15 +16,6 @@ const Section = styled.section`
     right: -20%;
     width: 50%;
   }
-`;
-
-const Container = styled.div`
-  ${maxWidthLg}
-  ${sectionSpacingSm}
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: var(--gap);
 
   .img {
     position: relative;
@@ -34,8 +25,8 @@ const Container = styled.div`
 
 const HomeFeatureSectionTwo = () => {
   return (
-    <Section>
-      <Container>
+    <StyledSection>
+      <TwoCol center md>
         <div className='info'>
           <SectionHeading light>Simple UI & UX</SectionHeading>
           <Paragraph light>
@@ -48,9 +39,9 @@ const HomeFeatureSectionTwo = () => {
           alt='illustration of payapi app'
           className='img'
         />
-      </Container>
+      </TwoCol>
       <img src={bgPattern} alt='' className='bg-pattern' />
-    </Section>
+    </StyledSection>
   );
 };
 

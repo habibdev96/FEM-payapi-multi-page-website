@@ -1,29 +1,16 @@
 import styled from 'styled-components';
 import ContactForm from './ContactForm';
-import { maxWidthLg, sectionSpacingSm } from '../../abstracts/Mixins';
 import { SubHeading } from '../styledElements/Headings';
+import { TwoCol, ThreeCol } from '../styledElements/Containers';
 import { useGlobalContext } from '../../context';
 
-const Container = styled.div`
-  ${maxWidthLg}
-  ${sectionSpacingSm}
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--gap);
-
+const StyledSection = styled.section`
   .companies {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--gap);
     padding-top: 5rem;
   }
 
   .company {
     width: 15rem;
-
-    &:nth-child(5) {
-      width: 13rem;
-    }
   }
 `;
 
@@ -31,14 +18,14 @@ const ContactSection = () => {
   const { companies } = useGlobalContext();
 
   return (
-    <section>
-      <Container>
+    <StyledSection>
+      <TwoCol sm>
         <ContactForm />
         <div className='info'>
           <SubHeading>
             Join the thousands of innovators already building with u
           </SubHeading>
-          <div className='companies'>
+          <ThreeCol className='companies'>
             {companies.map((company) => (
               <img
                 key={company.id}
@@ -47,10 +34,10 @@ const ContactSection = () => {
                 className='company'
               />
             ))}
-          </div>
+          </ThreeCol>
         </div>
-      </Container>
-    </section>
+      </TwoCol>
+    </StyledSection>
   );
 };
 

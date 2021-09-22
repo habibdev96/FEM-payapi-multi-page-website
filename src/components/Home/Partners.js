@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { maxWidthLg, sectionSpacingMd } from '../../abstracts/Mixins';
 import { SectionHeading } from '../styledElements/Headings';
 import Paragraph from '../styledElements/Paragraphs';
 import bgPattern from '../../assets/shared/desktop/bg-pattern-circle.svg';
 import { Button } from '../styledElements/Buttons';
+import { TwoCol, ThreeCol } from '../styledElements/Containers';
 import { useGlobalContext } from '../../context';
 
-const Section = styled.section`
+const StyledSection = styled.section`
   position: relative;
   background-color: var(--mirageBlue);
   overflow: hidden;
@@ -19,37 +19,13 @@ const Section = styled.section`
   }
 `;
 
-const Container = styled.div`
-  ${maxWidthLg}
-  ${sectionSpacingMd}
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: 20rem;
-
-  .companies {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--gap);
-  }
-
-  .company {
-    width: 15rem;
-
-    &:nth-child(5) {
-      width: 12rem;
-      margin: 0 auto;
-    }
-  }
-`;
-
 const Partners = () => {
   const { companies } = useGlobalContext();
 
   return (
-    <Section>
+    <StyledSection>
       <img src={bgPattern} alt='' className='bg-pattern' />
-      <Container>
+      <TwoCol gap center md>
         <div className='info'>
           <SectionHeading light>Who we work with</SectionHeading>
           <Paragraph light>
@@ -62,7 +38,7 @@ const Partners = () => {
             About us
           </Button>
         </div>
-        <div className='companies'>
+        <ThreeCol gap center>
           {companies.map((company) => (
             <img
               key={company.id}
@@ -71,9 +47,9 @@ const Partners = () => {
               className='company'
             />
           ))}
-        </div>
-      </Container>
-    </Section>
+        </ThreeCol>
+      </TwoCol>
+    </StyledSection>
   );
 };
 
