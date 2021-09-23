@@ -18,7 +18,7 @@ export const AboutCompanyOne = () => {
 
   return (
     <section>
-      <Container>
+      <Container data-aos='fade-in' data-aos-delay='100'>
         {aboutTop.map((item) => (
           <AboutCompany key={item.id} {...item} />
         ))}
@@ -32,7 +32,7 @@ export const AboutCompanyTwo = () => {
 
   return (
     <section>
-      <Container>
+      <Container data-aos='fade-in' data-aos-delay='100'>
         {aboutBottom.map((item) => (
           <AboutCompany key={item.id} {...item} />
         ))}

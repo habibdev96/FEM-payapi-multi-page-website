@@ -45,7 +45,11 @@ const Cta = () => {
   const { ctaInputMessage, validateEmail } = useGlobalContext();
 
   return (
-    <StyledCta onSubmit={(e) => e.preventDefault()}>
+    <StyledCta
+      onSubmit={(e) => e.preventDefault()}
+      data-aos='fade-in'
+      data-aos-delay='100'
+    >
       <input
         type='text'
         placeholder='Enter email address'

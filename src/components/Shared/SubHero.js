@@ -5,7 +5,9 @@ const SubHero = ({ title }) => {
   return (
     <header>
       <TwoCol sm>
-        <SectionHeading lg>{title}</SectionHeading>
+        <SectionHeading lg data-aos='fade-in'>
+          {title}
+        </SectionHeading>
       </TwoCol>
     </header>
   );

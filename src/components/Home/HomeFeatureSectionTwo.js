@@ -33,8 +33,10 @@ const HomeFeatureSectionTwo = () => {
     <StyledSection>
       <TwoCol center md>
         <div className='info'>
-          <SectionHeading light>Simple UI & UX</SectionHeading>
-          <Paragraph light>
+          <SectionHeading light data-aos='fade-in'>
+            Simple UI & UX
+          </SectionHeading>
+          <Paragraph light data-aos='fade-in' data-aos-delay='100'>
             Our pre-built form is easy to integrate in your app or website’s
             checkout flow and designed to optimize conversion.
           </Paragraph>
@@ -43,6 +45,8 @@ const HomeFeatureSectionTwo = () => {
           src={phonesImage}
           alt='illustration of payapi app'
           className='img'
+          data-aos='fade-in'
+          data-aos-delay='200'
         />
       </TwoCol>
       <img src={bgPattern} alt='' className='bg-pattern' />

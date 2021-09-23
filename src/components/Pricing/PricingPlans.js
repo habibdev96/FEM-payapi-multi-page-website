@@ -7,7 +7,7 @@ const PricingPlans = () => {
 
   return (
     <section>
-      <ThreeCol sm>
+      <ThreeCol sm data-aos='fade-in' data-aos-delay='100'>
         {pricings.map((price) => (
           <PricingPlan key={price.id} {...price} />
         ))}

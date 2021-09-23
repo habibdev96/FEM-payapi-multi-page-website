@@ -7,7 +7,7 @@ const HomeFeatureCards = () => {
 
   return (
     <section>
-      <ThreeCol center md>
+      <ThreeCol center md data-aos='fade-in' data-aos-delay='200'>
         {features.map((feature) => (
           <HomeFeatureCard key={feature.id} {...feature} />
         ))}

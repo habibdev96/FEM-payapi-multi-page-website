@@ -44,11 +44,11 @@ const HomeHero = () => {
     <StyledHero>
       <TwoCol sm>
         <div>
-          <HeroHeading>
+          <HeroHeading data-aos='fade-in'>
             Start building with our APIs for absolutely free.
           </HeroHeading>
           <Cta />
-          <p className='questions'>
+          <p className='questions' data-aos='fade-in' data-aos-delay='200'>
             Have any questions?{' '}
             <StyledLink to='/Contact'>Contact us</StyledLink>
           </p>
@@ -57,6 +57,8 @@ const HomeHero = () => {
           src={heroImg}
           alt='payapi notification on mobile device'
           className='img'
+          data-aos='fade-in'
+          data-aos-delay='200'
         />
       </TwoCol>
     </StyledHero>

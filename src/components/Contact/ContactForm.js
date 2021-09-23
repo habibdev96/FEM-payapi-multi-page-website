@@ -46,7 +46,7 @@ const ContactForm = () => {
   const { handleSubmit, register, errors, onSubmit } = useGlobalContext();
 
   return (
-    <StyledForm onSubmit={handleSubmit(onSubmit)}>
+    <StyledForm onSubmit={handleSubmit(onSubmit)} data-aos='fade-in'>
       <div className='form-control'>
         <input
           type='text'

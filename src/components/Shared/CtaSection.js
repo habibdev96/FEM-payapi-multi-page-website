@@ -6,7 +6,7 @@ const CtaSection = () => {
   return (
     <section>
       <TwoCol md center>
-        <SectionHeading>Ready to start?</SectionHeading>
+        <SectionHeading data-aos='fade-in'>Ready to start?</SectionHeading>
         <Cta />
       </TwoCol>
     </section>

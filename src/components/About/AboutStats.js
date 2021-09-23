@@ -10,7 +10,12 @@ const AboutStats = () => {
     <section>
       <FlexSm sm>
         {stats.map((stat) => (
-          <article key={stat.id} className='stat'>
+          <article
+            key={stat.id}
+            className='stat'
+            data-aos='fade-in'
+            data-aos-delay='100'
+          >
             <Paragraph>{stat.title}</Paragraph>
             <StatHeading>{stat.count}</StatHeading>
           </article>

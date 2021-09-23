@@ -43,10 +43,10 @@ const ContactSection = () => {
       <TwoCol md center>
         <ContactForm />
         <div className='info'>
-          <SubHeading>
+          <SubHeading data-aos='fade-in' data-aos-delay='100'>
             Join the thousands of innovators already building with u
           </SubHeading>
-          <div className='companies'>
+          <div className='companies' data-aos='fade-in' data-aos-delay='200'>
             {companies.map((company) => (
               <img
                 key={company.id}
