@@ -24,7 +24,7 @@ const MobileMenuToggler = () => {
   const { setIsSidebarOpen } = useGlobalContext();
 
   return (
-    <Button className='toggle' onClick={() => setIsSidebarOpen(true)}>
+    <Button onClick={() => setIsSidebarOpen(true)}>
       <FaBars className='icon' />
     </Button>
   );

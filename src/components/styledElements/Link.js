@@ -6,7 +6,7 @@ const StyledLink = styled(Link)`
   ${textStyles}
   position: relative;
   z-index: 10;
-  font-size: 1.5rem;
+  font-size: ${({ mobile }) => (mobile ? '2.3rem' : '1.5rem')};
   font-weight: bold;
   transition: var(--mainTransition);
   color: ${({ light }) => (light ? 'var(--white)' : 'var(--lightSanJuanBlue)')};

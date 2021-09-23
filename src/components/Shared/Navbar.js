@@ -70,7 +70,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Button to='Pricing' primary={+true} className='btn'>
+        <Button to='/Contact' primary={+true} className='btn'>
           Schedule a Demo
         </Button>
         <MobileMenuToggler />

@@ -8,11 +8,10 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import Navbar from './components/Shared/Navbar';
+import MobileMenu from './components/Shared/MobileMenu';
 import { MainBgPattern } from './components/styledElements/Pattern';
 import CtaSection from './components/Shared/CtaSection';
 import Footer from './components/Shared/Footer';
-
-// TODO: mobile menu
 
 const App = () => {
   AOS.init({ offset: 10, duration: 1000, once: true });
@@ -23,6 +22,7 @@ const App = () => {
       <Router>
         <MainBgPattern />
         <Navbar />
+        <MobileMenu />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/Pricing' component={Pricing} />
