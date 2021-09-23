@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { useForm } from 'react-hook-form';
+import validator from 'validator';
 import {
   companiesData,
   featuresCardsData,
@@ -17,7 +18,20 @@ export const AppProvider = ({ children }) => {
   const [aboutTop, setAboutTop] = useState(aboutData[0]);
   const [aboutBottom, setAboutBottom] = useState(aboutData[1]);
   const [stats, setStats] = useState(statsData);
+  const [ctaInputMessage, setCtaInputMessage] = useState('');
 
+  // validation for cta
+  const validateEmail = (e) => {
+    let email = e.target.value;
+
+    if (validator.isEmail(email)) {
+      setCtaInputMessage('Looks good!');
+    } else {
+      setCtaInputMessage('Please enter valid email');
+    }
+  };
+
+  // validation for contact form
   const {
     handleSubmit,
     register,
@@ -41,6 +55,8 @@ export const AppProvider = ({ children }) => {
         register,
         errors,
         onSubmit,
+        ctaInputMessage,
+        validateEmail,
       }}
     >
       {children}

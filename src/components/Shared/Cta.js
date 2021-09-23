@@ -1,10 +1,11 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import { CtaButton } from '../styledElements/Buttons';
 import { textStyles } from '../../abstracts/Mixins';
+import { useGlobalContext } from '../../context';
 
-const StyledCta = styled.div`
+const StyledCta = styled.form`
   width: 100%;
-  position: relative;
   margin: 2rem 0;
 
   .input {
@@ -20,12 +21,37 @@ const StyledCta = styled.div`
     box-shadow: var(--mainShadow);
     border-radius: var(--btnRadius);
   }
+
+  .message {
+    ${textStyles}
+    color: var(--error);
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-left: 2rem;
+
+    &.success {
+      color: green;
+    }
+  }
 `;
 
 const Cta = () => {
+  const { ctaInputMessage, validateEmail } = useGlobalContext();
+
   return (
-    <StyledCta>
-      <input type='text' placeholder='Enter email address' className='input' />
+    <StyledCta onSubmit={(e) => e.preventDefault()}>
+      <input
+        type='text'
+        placeholder='Enter email address'
+        className='input'
+        autoComplete='off'
+        onChange={(e) => validateEmail(e)}
+      />
+      <span
+        className={`message ${ctaInputMessage === 'Looks good!' && 'success'}`}
+      >
+        {ctaInputMessage}
+      </span>
       <CtaButton type='submit' value='Schedule a Demo' />
     </StyledCta>
   );
