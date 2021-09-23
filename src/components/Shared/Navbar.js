@@ -5,6 +5,7 @@ import { maxWidthLg, sectionSpacingSm } from '../../abstracts/Mixins';
 import { Link } from 'react-router-dom';
 import { Button } from '../styledElements/Buttons';
 import Responsive from '../../abstracts/Responsive';
+import MobileMenuToggler from './MobileMenuToggler';
 
 const StyledNav = styled.nav`
   position: relative;
@@ -72,6 +73,7 @@ const Navbar = () => {
         <Button to='Pricing' primary={+true} className='btn'>
           Schedule a Demo
         </Button>
+        <MobileMenuToggler />
       </Container>
     </StyledNav>
   );

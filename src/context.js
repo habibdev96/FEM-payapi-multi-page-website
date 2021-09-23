@@ -19,6 +19,7 @@ export const AppProvider = ({ children }) => {
   const [aboutBottom, setAboutBottom] = useState(aboutData[1]);
   const [stats, setStats] = useState(statsData);
   const [ctaInputMessage, setCtaInputMessage] = useState('');
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // validation for cta
   const validateEmail = (e) => {
@@ -57,6 +58,8 @@ export const AppProvider = ({ children }) => {
         onSubmit,
         ctaInputMessage,
         validateEmail,
+        isSidebarOpen,
+        setIsSidebarOpen,
       }}
     >
       {children}

@@ -12,7 +12,7 @@ import { MainBgPattern } from './components/styledElements/Pattern';
 import CtaSection from './components/Shared/CtaSection';
 import Footer from './components/Shared/Footer';
 
-// TODO: error page | mobile menu
+// TODO: mobile menu
 
 const App = () => {
   AOS.init({ offset: 10, duration: 1000, once: true });
