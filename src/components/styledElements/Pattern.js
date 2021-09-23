@@ -22,3 +22,16 @@ export const SecondaryBgPattern = styled(MainBgPattern)`
   clip-path: circle(30% at 0 50%);
   height: 200%;
 `;
+
+export const NotFoundPatternTop = styled.div`
+  position: absolute;
+  background-color: var(--lightSanJuanBlue);
+  clip-path: circle(25% at 100% 0);
+  height: 100%;
+  width: 100%;
+  opacity: 0.1;
+`;
+
+export const NotFoundPatternBottom = styled(NotFoundPatternTop)`
+  clip-path: circle(25% at 0 100%);
+`;
