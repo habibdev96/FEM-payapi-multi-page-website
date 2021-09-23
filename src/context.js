@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import { useForm } from 'react-hook-form';
 import {
   companiesData,
   featuresCardsData,
@@ -17,18 +18,29 @@ export const AppProvider = ({ children }) => {
   const [aboutBottom, setAboutBottom] = useState(aboutData[1]);
   const [stats, setStats] = useState(statsData);
 
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (values) => console.log(values);
+
   const scrollToTop = () => window.scrollTo(0, 0);
 
   return (
     <AppContext.Provider
       value={{
-        scrollToTop,
         companies,
         features,
         pricings,
         aboutTop,
         aboutBottom,
         stats,
+        scrollToTop,
+        handleSubmit,
+        register,
+        errors,
+        onSubmit,
       }}
     >
       {children}

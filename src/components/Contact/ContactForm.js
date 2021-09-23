@@ -2,11 +2,12 @@ import styled from 'styled-components';
 import Paragraph from '../styledElements/Paragraphs';
 import { FormButton } from '../styledElements/Buttons';
 import { textStyles } from '../../abstracts/Mixins';
+import { useGlobalContext } from '../../context';
 
 const StyledForm = styled.form`
   .form-control {
     margin: 2rem 0;
-    border-bottom: 0.1rem solid #f2f2f2;
+    border-bottom: 0.1rem solid var(--lightSanJuanBlue);
   }
 
   .input,
@@ -32,25 +33,76 @@ const StyledForm = styled.form`
     justify-content: space-around;
     margin: 2rem 0;
   }
+
+  .message {
+    ${textStyles}
+    color: var(--error);
+    font-size: 1.1rem;
+  }
 `;
 
 const ContactForm = () => {
+  const { handleSubmit, register, errors, onSubmit } = useGlobalContext();
+
   return (
-    <StyledForm>
+    <StyledForm onSubmit={handleSubmit(onSubmit)}>
       <div className='form-control'>
-        <input type='text' className='input' placeholder='Name' />
+        <input
+          type='text'
+          className='input'
+          placeholder='Name'
+          autoComplete='off'
+          {...register('name', { required: true })}
+        />
+        {errors.name && <small className='message'>name is required.</small>}
       </div>
       <div className='form-control'>
-        <input type='text' className='input' placeholder='Email' />
+        <input
+          type='text'
+          className='input'
+          placeholder='Email'
+          autoComplete='off'
+          {...register('email', {
+            required: true,
+            pattern: {
+              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+              message: 'invalid email address',
+            },
+          })}
+        />
+        {errors.email && (
+          <small className='message'>{errors.email.message}</small>
+        )}
       </div>
       <div className='form-control'>
-        <input type='text' className='input' placeholder='Company Name' />
+        <input
+          type='text'
+          className='input'
+          placeholder='Company Name'
+          autoComplete='off'
+        />
       </div>
       <div className='form-control'>
-        <input type='text' className='input' placeholder='Title' />
+        <input
+          type='text'
+          className='input'
+          placeholder='Title'
+          autoComplete='off'
+          {...register('title', { required: true })}
+        />
+        {errors.title && (
+          <small className='message'>subject title is required.</small>
+        )}
       </div>
       <div className='form-control'>
-        <textarea className='textarea' placeholder='Message'></textarea>
+        <textarea
+          className='textarea'
+          placeholder='Message'
+          {...register('message', { required: true })}
+        ></textarea>
+        {errors.message && (
+          <small className='message'>subject message is required.</small>
+        )}
       </div>
       <div className='checkbox-container'>
         <input type='checkbox' className='checkbox' />

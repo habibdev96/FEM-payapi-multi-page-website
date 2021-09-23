@@ -11,8 +11,8 @@ const Plan = styled.article`
   }
 
   .features {
-    border-top: 0.1rem solid #f2f2f2;
-    border-bottom: 0.1rem solid #f2f2f2;
+    border-top: 0.1rem solid var(--lightSanJuanBlue);
+    border-bottom: 0.1rem solid var(--lightSanJuanBlue);
     padding: 2rem 0;
     margin-bottom: 2rem;
   }
