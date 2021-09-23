@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Responsive from '../../abstracts/Responsive';
 
 export const MainBgPattern = styled.div`
   position: absolute;
@@ -7,6 +8,14 @@ export const MainBgPattern = styled.div`
   clip-path: circle(25% at 100% 0);
   height: 100%;
   width: 100%;
+
+  ${Responsive.lg`
+    clip-path: circle(10% at 100% 0);
+  `}
+
+  ${Responsive.md`
+    clip-path: circle(10% at 50% 0);
+  `}
 `;
 
 export const SecondaryBgPattern = styled(MainBgPattern)`

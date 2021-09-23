@@ -4,7 +4,7 @@ import { TwoCol } from '../styledElements/Containers';
 const SubHero = ({ title }) => {
   return (
     <header>
-      <TwoCol>
+      <TwoCol sm>
         <SectionHeading lg>{title}</SectionHeading>
       </TwoCol>
     </header>

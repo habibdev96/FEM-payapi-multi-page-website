@@ -9,6 +9,8 @@ import { MainBgPattern } from './components/styledElements/Pattern';
 import CtaSection from './components/Shared/CtaSection';
 import Footer from './components/Shared/Footer';
 
+// TODO: make responsive | add aos.js | mobile menu
+
 const App = () => {
   return (
     <>

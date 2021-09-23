@@ -1,10 +1,11 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 import { CtaButton } from '../styledElements/Buttons';
 import { textStyles } from '../../abstracts/Mixins';
 import { useGlobalContext } from '../../context';
+import Responsive from '../../abstracts/Responsive';
 
 const StyledCta = styled.form`
+  position: relative;
   width: 100%;
   margin: 2rem 0;
 
@@ -16,6 +17,7 @@ const StyledCta = styled.form`
     font-weight: bold;
     display: inline-block;
     padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
     color: var(--sanJuanBlue);
     background-color: var(--white);
     box-shadow: var(--mainShadow);
@@ -24,10 +26,14 @@ const StyledCta = styled.form`
 
   .message {
     ${textStyles}
-    color: var(--error);
     font-size: 1.1rem;
     display: inline-block;
-    margin-left: 2rem;
+    margin: 0 0 1rem 2rem;
+    color: var(--error);
+
+    ${Responsive.md`
+      margin-left: 0;
+    `}
 
     &.success {
       color: green;

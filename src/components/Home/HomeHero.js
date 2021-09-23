@@ -5,18 +5,15 @@ import heroImg from '../../assets/home/desktop/illustration-phone-mockup.svg';
 import { textStyles } from '../../abstracts/Mixins';
 import StyledLink from '../styledElements/Link';
 import { TwoCol } from '../styledElements/Containers';
+import Responsive from '../../abstracts/Responsive';
 
 const StyledHero = styled.header`
-  .bg-pattern {
-    position: absolute;
-    z-index: 1;
-    top: -10%;
-    right: -10%;
-    width: 50%;
-  }
-
   .info {
     padding: 8rem 0;
+
+    ${Responsive.md`
+      padding: 2rem 0;
+    `}
   }
 
   .questions {
@@ -30,14 +27,23 @@ const StyledHero = styled.header`
     margin: 0 auto;
     position: relative;
     z-index: 10;
+
+    ${Responsive.md`
+    width: 90%;
+    padding-left: 4rem;
+    `}
+
+    ${Responsive.sm`
+      width: 100%; 
+    `}
   }
 `;
 
 const HomeHero = () => {
   return (
     <StyledHero>
-      <TwoCol>
-        <div className='info'>
+      <TwoCol sm>
+        <div>
           <HeroHeading>
             Start building with our APIs for absolutely free.
           </HeroHeading>

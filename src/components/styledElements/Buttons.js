@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 import { textStyles } from '../../abstracts/Mixins';
+import Responsive from '../../abstracts/Responsive';
 
 export const Button = styled(Link)`
   ${textStyles}
@@ -74,6 +75,11 @@ export const CtaButton = styled.input`
   transition: var(--mainTransition);
   background-color: var(--darkPink);
   color: var(--white);
+
+  ${Responsive.sm`
+    position: static;
+    width: 100%;
+  `}
 
   &:hover,
   &:focus {

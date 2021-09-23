@@ -1,12 +1,33 @@
 import styled from 'styled-components';
 import ContactForm from './ContactForm';
 import { SubHeading } from '../styledElements/Headings';
-import { TwoCol, ThreeCol } from '../styledElements/Containers';
+import { TwoCol } from '../styledElements/Containers';
 import { useGlobalContext } from '../../context';
+import Responsive from '../../abstracts/Responsive';
 
 const StyledSection = styled.section`
   .companies {
     padding-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: var(--gap);
+
+    ${Responsive.lg`
+      grid-template-columns: repeat(2, 1fr);
+    `}
+
+    ${Responsive.md`
+      grid-template-columns: repeat(3, 1fr);
+    `}
+
+    ${Responsive.sm`
+      grid-template-columns: repeat(2, 1fr);
+    `}
+
+    ${Responsive.xs`
+      display: none;
+    `}
   }
 
   .company {
@@ -19,13 +40,13 @@ const ContactSection = () => {
 
   return (
     <StyledSection>
-      <TwoCol md>
+      <TwoCol md center>
         <ContactForm />
         <div className='info'>
           <SubHeading>
             Join the thousands of innovators already building with u
           </SubHeading>
-          <ThreeCol className='companies'>
+          <div className='companies'>
             {companies.map((company) => (
               <img
                 key={company.id}
@@ -34,7 +55,7 @@ const ContactSection = () => {
                 className='company'
               />
             ))}
-          </ThreeCol>
+          </div>
         </div>
       </TwoCol>
     </StyledSection>

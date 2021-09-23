@@ -4,6 +4,7 @@ import Paragraph from '../styledElements/Paragraphs';
 import checkmarkIcon from '../../assets/shared/desktop/icon-check.svg';
 import { textStyles } from '../../abstracts/Mixins';
 import { Button } from '../styledElements/Buttons';
+import Responsive from '../../abstracts/Responsive';
 
 const Plan = styled.article`
   .info {
@@ -15,6 +16,20 @@ const Plan = styled.article`
     border-bottom: 0.1rem solid var(--lightSanJuanBlue);
     padding: 2rem 0;
     margin-bottom: 2rem;
+
+    ${Responsive.md`
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--gap);
+    `}
+
+    ${Responsive.sm`
+      grid-template-columns: repeat(2, 1fr);
+    `}
+
+    ${Responsive.xs`
+      grid-template-columns: 1fr;
+    `}
   }
 
   .feature {

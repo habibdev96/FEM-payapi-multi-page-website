@@ -6,6 +6,7 @@ import bgPattern from '../../assets/shared/desktop/bg-pattern-circle.svg';
 import { FaFacebookSquare, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { Flex } from '../styledElements/Containers';
 import Tag from './Tag';
+import Responsive from '../../abstracts/Responsive';
 
 const StyledFooter = styled.footer`
   position: relative;
@@ -17,12 +18,25 @@ const StyledFooter = styled.footer`
     width: 50%;
     bottom: -90%;
     left: -20%;
+
+    ${Responsive.md`
+      width: 100%;
+    `}
+
+    ${Responsive.sm`
+      bottom: -10%;
+    `}
   }
 
   .info {
     display: flex;
     align-items: center;
     gap: var(--gap);
+
+    ${Responsive.md`
+      flex-direction: column;
+      margin: 0 auto;
+    `}
   }
 
   .logo {

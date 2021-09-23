@@ -3,8 +3,9 @@ import { SectionHeading } from '../styledElements/Headings';
 import Paragraph from '../styledElements/Paragraphs';
 import bgPattern from '../../assets/shared/desktop/bg-pattern-circle.svg';
 import { Button } from '../styledElements/Buttons';
-import { TwoCol, ThreeCol } from '../styledElements/Containers';
+import { TwoCol } from '../styledElements/Containers';
 import { useGlobalContext } from '../../context';
+import Responsive from '../../abstracts/Responsive';
 
 const StyledSection = styled.section`
   position: relative;
@@ -16,6 +17,22 @@ const StyledSection = styled.section`
     position: absolute;
     top: -105%;
     left: -20%;
+
+    ${Responsive.xxl`
+      top: -30%;
+    `}
+
+    ${Responsive.md`
+      top: -20%;
+      width: 100%;
+    `}
+  }
+
+  .companies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: var(--gap);
   }
 `;
 
@@ -38,7 +55,7 @@ const Partners = () => {
             About us
           </Button>
         </div>
-        <ThreeCol gap center>
+        <div className='companies'>
           {companies.map((company) => (
             <img
               key={company.id}
@@ -47,7 +64,7 @@ const Partners = () => {
               className='company'
             />
           ))}
-        </ThreeCol>
+        </div>
       </TwoCol>
     </StyledSection>
   );

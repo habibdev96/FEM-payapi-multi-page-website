@@ -31,6 +31,7 @@ const StyledForm = styled.form`
     display: flex;
     align-items: center;
     justify-content: space-around;
+    gap: var(--gap);
     margin: 2rem 0;
   }
 

@@ -4,6 +4,7 @@ import Paragraph from '../styledElements/Paragraphs';
 import phonesImage from '../../assets/home/desktop/illustration-simple-ui.svg';
 import bgPattern from '../../assets/shared/desktop/bg-pattern-circle.svg';
 import { TwoCol } from '../styledElements/Containers';
+import Responsive from '../../abstracts/Responsive';
 
 const StyledSection = styled.section`
   background-color: var(--mirageBlue);
@@ -15,6 +16,10 @@ const StyledSection = styled.section`
     top: -20%;
     right: -20%;
     width: 50%;
+
+    ${Responsive.md`
+      width: 100%;
+    `}
   }
 
   .img {

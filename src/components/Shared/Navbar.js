@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 import logo from '../../assets/shared/desktop/logo.svg';
 import StyledLink from '../styledElements/Link';
+import { maxWidthLg, sectionSpacingSm } from '../../abstracts/Mixins';
 import { Link } from 'react-router-dom';
 import { Button } from '../styledElements/Buttons';
-import { Flex } from '../styledElements/Containers';
+import Responsive from '../../abstracts/Responsive';
 
 const StyledNav = styled.nav`
+  position: relative;
+  z-index: 10;
+
   .info {
     display: flex;
     align-items: center;
@@ -14,19 +18,41 @@ const StyledNav = styled.nav`
 
   .logo {
     width: 20rem;
+
+    ${Responsive.sm`
+      width: 15rem;
+    `}
   }
 
   .links {
     display: flex;
     align-items: center;
     gap: var(--gap);
+
+    ${Responsive.md`
+      display: none;
+    `}
   }
+
+  .btn {
+    ${Responsive.md`
+      display: none;
+    `}
+  }
+`;
+
+const Container = styled.div`
+  ${maxWidthLg}
+  ${sectionSpacingSm}
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 const Navbar = () => {
   return (
     <StyledNav>
-      <Flex sm>
+      <Container>
         <div className='info'>
           <Link to='/'>
             <img src={logo} alt='payapi logo' className='logo' />
@@ -43,10 +69,10 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Button to='Pricing' primary={+true}>
+        <Button to='Pricing' primary={+true} className='btn'>
           Schedule a Demo
         </Button>
-      </Flex>
+      </Container>
     </StyledNav>
   );
 };
