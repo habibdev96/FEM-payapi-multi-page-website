@@ -9,6 +9,7 @@ site: https://fem-payapi-multi-page-website-challenge.netlify.app/
 - mobile menu & toggle
 - responsive design
 - animated content on scroll
+- 404 not found page
 
 #### Technologies used
 - react
