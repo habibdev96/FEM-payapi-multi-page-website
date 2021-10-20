@@ -13,24 +13,24 @@
 [2]: https://fem-payapi-multi-page-website-challenge.netlify.app/
 [![preview site][1]][2]
 
-#### Features
+## Features
 - form validation & cta email validation
 - mobile menu & toggle
 - responsive design
 - animated content on scroll
 - 404 not found page
 
-#### Technologies used
+## Technologies used
 - react
 - styled components
 
-#### Libraries
+## Libraries
 - react-router-dom
 - react-hook-form
 - validator
 - aos.js
 - react-icons
 
-#### State Management
+## State Management
 - context api
 
